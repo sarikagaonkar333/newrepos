@@ -1,0 +1,24 @@
+---
+-
+  hosts: all
+  gather_facts: true # this will make not to gather facts before running tasks
+
+  tasks: 
+    - name: play1 - task1
+      debug:
+           msg: play1-task1
+
+    - include_tasks: play1-task2.yml
+    
+
+- import_playbook: play2.yml
+
+
+...
+
+
+
+
+
+
+
