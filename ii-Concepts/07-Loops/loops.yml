@@ -5,13 +5,13 @@
 
   tasks: 
     - name: stop service
-    - include : services.yml
       win_service:
-        Name: {{ servicenames }}
+        Name: {{ var_files }}
         state: stopped
       when: state == "started"
 
- 
+ vars_files:
+    - services.yml
 
 # you can also use
 # loop:
