@@ -6,7 +6,7 @@
   tasks: 
     - name: stop service
       win_service:
-        Name: {{ var_files }}
+        Name: {{var_files}}
         state: stopped
       when: state == "started"
 
