@@ -1,0 +1,13 @@
+---
+-
+ hosts: all
+
+ tasks:
+         - name: play2 - task1
+           debug:
+                   msg: play2-Task1
+
+         
+
+
+...

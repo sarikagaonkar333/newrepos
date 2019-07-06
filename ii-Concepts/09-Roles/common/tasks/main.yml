@@ -1,0 +1,16 @@
+---
+# tasks file for common
+
+- name: Install TelnetClient
+  win_feature:
+    name: 
+    - Telnet-Client
+    - Windows-Server-Backup
+    state: present
+
+- name: Stop all services
+  debug:
+    msg: " stopping the service {{ item }}"
+  loop: "{{services}}"
+  notify: send_a_mail
+  tags: stop_service
