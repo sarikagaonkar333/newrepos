@@ -1,8 +1,6 @@
 ---
-
 Servicenames: 
-  - bits
-  - dnscache
-  - dhcp
-
+ - bits
+ - dhcp 
+  
 ...
