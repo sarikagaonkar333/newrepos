@@ -6,11 +6,13 @@
   tasks: 
     - name: stop service
       win_service:
-        content: "We are going to stop {{ services }} service\n"
+        Name: {{ vars_files }}
+        content: "We are going to stop {{  }} service\n"
         state: stopped
       when: state == "started"
 
-    
+  vars_files:
+    - services.yml  
 
 # you can also use
 # loop:
