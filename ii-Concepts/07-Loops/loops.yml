@@ -10,7 +10,7 @@
         state: stopped
       when: state == "started"
 
- vars_files:
+  vars_files:
     - services.yml
 
 # you can also use
